@@ -20,14 +20,9 @@ import com.pawx.uploadprogress.modle.User;
 import com.pawx.uploadprogress.service.ProgressEntity;
 
 /**
- * SpringMVC中的文件上传
- * @see 第一步：由于SpringMVC使用的是commons-fileupload实现，故将其组件引入项目中
- * @see       这里用到的是commons-fileupload-1.2.2.jar和commons-io-2.0.1.jar
- * @see 第二步：在####-servlet.xml中配置MultipartResolver处理器。可在此加入对上传文件的属性限制
- * @see 第三步：在Controller的方法中添加MultipartFile参数。该参数用于接收表单中file组件的内容
- * @see 第四步：编写前台表单。注意enctype="multipart/form-data"以及<input type="file" name="****"/>
- * @author 宏宇
- * @create May 12, 2012 1:26:21 AM
+ * 上传文件
+ * @author wangxuan
+ *
  */
 @Controller
 @RequestMapping("/user")
@@ -79,7 +74,7 @@ public class UploadController {
     
     @RequestMapping(value = "/getProgress")  
     @ResponseBody  
-    public String initCreateInfo(Map<String, Object> model) {  
+    public String getProgress(Map<String, Object> model) {  
         ProgressEntity status = (ProgressEntity) model.get("status");  
         if(status==null){  
             return "{}";  

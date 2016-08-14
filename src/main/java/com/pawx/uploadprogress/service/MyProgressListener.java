@@ -3,13 +3,19 @@ import javax.servlet.http.HttpSession;
   
 
 
+
 import org.apache.commons.fileupload.ProgressListener;  
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Component;  
   
 @Component  
 public class MyProgressListener implements ProgressListener {  
       
     private HttpSession session;  
+    
+    @Autowired
+    private StringRedisTemplate redisTemplate;
   
     public void setSession(HttpSession session){  
         this.session=session;  
