@@ -16,7 +16,7 @@ import redis.clients.jedis.JedisPoolConfig;
  *
  */
 @Configuration
-@ComponentScan(basePackages="com.justinrmiller.redismicroservices.service")
+@ComponentScan(basePackages="com.pawx")
 public class RedisConfig {
     @Bean
     public RedisConnectionFactory jedisConnectionFactory(){
