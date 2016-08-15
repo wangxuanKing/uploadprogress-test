@@ -23,7 +23,7 @@ public class CustomBeanConfig implements EmbeddedServletContainerCustomizer  {
      * @see org.springframework.boot.context.embedded.EmbeddedServletContainerCustomizer#customize(org.springframework.boot.context.embedded.ConfigurableEmbeddedServletContainer) 
      */  
     public void customize(ConfigurableEmbeddedServletContainer container) {  
-         container.setContextPath("/springboot");  
+         container.setContextPath("/upload");  
          container.setPort(8081);  
          container.setSessionTimeout(30);  
     }  
