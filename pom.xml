@@ -94,7 +94,7 @@
 	</dependencies>
 	
 	<build>
-	    <finalName>uploadprogress</finalName>
+	    <finalName>upload</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
